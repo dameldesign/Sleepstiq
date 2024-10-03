@@ -4,10 +4,9 @@ export interface NavItem {
   isActive?: boolean;
 }
 
-
 export type Testimonial = {
-    quote: string;
-    name: string;
-    imgSrc: string;
-    productSrc?: string;
-  };
+  quote: string;
+  name: string;
+  imgSrc: string;
+  productSrc?: string;
+};

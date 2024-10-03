@@ -6,8 +6,8 @@ import ProductFAQ from '@/components/faqs/Index';
 export default function Faq() {
   return (
     <main className=" min-h-screen mx-auto ">
-<div className="bg-cover bg-[#FBF9F2] bg-center bg-no-repeat md:h-[811px] relative transition-all duration-300 dark:bg-black">
-<Navbar />
+      <div className="bg-cover bg-[#FBF9F2] bg-center bg-no-repeat md:h-[811px] relative transition-all duration-300 dark:bg-black">
+        <Navbar />
         <section className="container mx-auto px-4 pt-20 pb-16 md:pl-32 md flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 flex items-start justify-start flex-col gap-6">
             <p className="text-primary font-light mb-4 ">We're here to help you</p>

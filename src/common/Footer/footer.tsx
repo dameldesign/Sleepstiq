@@ -1,4 +1,3 @@
-import React from 'react';
 import backgroundImage from '../../../public/images/footer.png';
 
 export default function Footer() {

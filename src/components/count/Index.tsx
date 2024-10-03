@@ -20,16 +20,7 @@ const NumberInput: React.FC<NumberInputProps> = ({ min = 0, max = 100, onChange 
     }
   };
 
-  return (
-    <Input
-      type="number"
-      value={value}
-      onChange={handleChange}
-      min={min}
-      max={max}
-      className="w-14 h-8"
-    />
-  );
+  return <Input type="number" value={value} onChange={handleChange} min={min} max={max} className="w-14 h-8" />;
 };
 
 export default NumberInput;

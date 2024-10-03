@@ -74,12 +74,10 @@ export default function Homepage() {
         </Button>
       </div>
 
-       {/* Testimonial  */}
-       <div className="md:pl-32 pb-12  [@media(max-width:1000px)]:px-6   mb-40  pt-28 ">
+      {/* Testimonial  */}
+      <div className="md:pl-32 pb-12  [@media(max-width:1000px)]:px-6   mb-40  pt-28 ">
         <ProductSlider products={products} />
       </div>
-
-
 
       <Footer />
     </main>

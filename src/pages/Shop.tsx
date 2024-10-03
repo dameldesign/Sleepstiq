@@ -59,7 +59,7 @@ const Shop: React.FC = () => {
               lull you to bed.
             </p>
             <ul className="text-primary-foreground italic text-start font-thin mb-4 space-y-2">
-              <li >🌙 Promotes calm and relaxation.</li>
+              <li>🌙 Promotes calm and relaxation.</li>
               <li>💤 Inhalation allows for a rapid effect.</li>
               <li>✅ 100% drug-free, plant-based ingredients.</li>
               <li>‍⚕️ 3rd-party lab tested.</li>
@@ -72,7 +72,7 @@ const Shop: React.FC = () => {
               </div>
               <div className="flex flex-col items-start gap-2">
                 <label className="text-base font-normal" htmlFor="quantity">
-               Unit
+                  Unit
                 </label>
 
                 <NumberInput min={1} max={10} onChange={handleNumberChange} />
@@ -85,9 +85,8 @@ const Shop: React.FC = () => {
         </div>
         {/* Testimonial  */}
         <div className="md:pl-32 mb-32 mt-40 pt-10 md:pt-20 border-t">
-        <TestimonialSlider testimonials={testimonials} />
-      </div>
-
+          <TestimonialSlider testimonials={testimonials} />
+        </div>
       </section>
 
       <Footer />
