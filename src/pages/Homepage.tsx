@@ -2,12 +2,13 @@ import Navbar from '@/common/Navbar/Index';
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
 import backgroundImage from '../../public/images/Slider.png';
-import { logos, testimonials } from '@/types/data';
+import { logos, products, testimonials } from '@/types/data';
 import Footer from '@/common/Footer/footer';
 import TestimonialSlider from '@/common/Testimonal';
 import ShopNow from '@/components/shop_now/Index';
 import Mission from '@/common/Mission/Index';
 import Happy from '@/components/happy/Index';
+import ProductSlider from '@/common/Product/Index';
 
 export default function Homepage() {
   /**
@@ -60,6 +61,25 @@ export default function Homepage() {
       <ShopNow />
       {/* Our Mission */}
       <Mission />
+      {/* visit */}
+      <div className="flex flex-col items-center justify-start [@media(max-width:1000px)]:px-6 gap-4 mt-16 md:w-[60%] border-b pb-16  mx-auto">
+        <h1 className="text-primary font-bold text-4xl mb-3">Visit Our Shop</h1>
+        <p className="text-primary-foreground font-thin text-base opacity-60  text-start">
+          Our Personal Diffuser is an aromatherapy device that contains a blend of melatonin, lavender, and chamomile. A
+          few breaths of our plant-based essential oil mist will mellow you out, quiet the mind, and lull you to bed.
+        </p>
+
+        <Button size="lg" className="bg-[#FC5959] w-[225px] mt-8 hover:bg-red-600 text-white">
+          Visit Shop
+        </Button>
+      </div>
+
+       {/* Testimonial  */}
+       <div className="md:pl-32 pb-12  [@media(max-width:1000px)]:px-6   mb-40  pt-28 ">
+        <ProductSlider products={products} />
+      </div>
+
+
 
       <Footer />
     </main>

@@ -48,7 +48,7 @@ const Shop: React.FC = () => {
 
         <div className=" flex flex-col md:flex-row items-center gap-6 justify-between mx-auto  w-full md:w-[85%]">
           <div className="">
-            <img src="/public/images/Group 3.png" alt="" className="w-[477px] h-[519px]" />
+            <img src="/images/Group 3.png" alt="" className="w-[477px] h-[519px]" />
           </div>
 
           <div className="flex flex-col items-start justify-start gap-4 mt-16 max-w-[421px]">
@@ -84,7 +84,7 @@ const Shop: React.FC = () => {
           </div>
         </div>
         {/* Testimonial  */}
-        <div className="md:pl-32 mb-32 mt-40 pt-20 border-t">
+        <div className="md:pl-32 mb-32 mt-40 pt-10 md:pt-20 border-t">
         <TestimonialSlider testimonials={testimonials} />
       </div>
 

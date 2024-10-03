@@ -8,6 +8,6 @@ export interface NavItem {
 export type Testimonial = {
     quote: string;
     name: string;
-
     imgSrc: string;
+    productSrc?: string;
   };

@@ -1,7 +1,5 @@
 import { Button } from '../ui/button';
 
-import React from 'react';
-
 export default function ShopNow() {
   return (
     <div>
@@ -16,9 +14,9 @@ export default function ShopNow() {
 
         <div className=" flex flex-col md:flex-row items-center gap-6 justify-between mx-auto  w-full md:w-[85%]">
           <div className=" relative">
-            <img src="/public/images/Group 3.png" alt="" className="w-[477px] h-[519px]" />
-            <div className="absolute bottom-0 flex items-center p-6 mt-3 justify-start left-20 shadow-2xl bg-white h-[158px] w-[453px] rounded-lg">
-              <ul className="text-primary-foreground italic text-start font-thin mb-4 space-y-2">
+            <img src="/images/Group 3.png" alt="" className="w-[477px] h-[519px]" />
+            <div className="absolute bottom-0  flex items-center p-6 mt-3 justify-start md:left-20 shadow-2xl bg-white h-auto md:h-[158px] md:w-[453px] rounded-lg">
+              <ul className="text-[#4D533C] italic text-start font-thin mb-4 space-y-2">
                 <li>😊 Promotes calm and relaxation.</li>
                 <li>💤 Inhalation allows for a rapid effect.</li>
                 <li>✅ 100% drug-free, plant-based ingredients.</li>

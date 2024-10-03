@@ -26,7 +26,11 @@ const Navbar = () => {
     <div className="">
       <header className="container mx-auto px-4 pb-6 pt-12 md:pl-32 flex justify-between items-center">
         <div className=" [@media(max-width:1000px)]:basis-[60%]">
-          <img src="/images/Brand.svg" alt="Sleep Petiq Logo" className="h-16  flex items-start justify-start" />
+          <img
+            src={theme === 'dark' ? '/images/Brand-white.svg' : '/images/Brand.svg'}
+            alt="Sleep Petiq Logo"
+            className="h-16 flex items-start justify-start"
+          />
         </div>
         <nav className="hidden md:flex space-x-14 basis-[55%]">
           {navItems.map((item) => (
@@ -48,11 +52,11 @@ const Navbar = () => {
           <Button onClick={toggleTheme} className="flex items-center gap-2">
             {theme === 'light' ? (
               <>
-                <Moon size={16} />
+                <Moon size={16} color="#ffffff" />
               </>
             ) : (
               <>
-                <Sun size={16} />
+                <Sun size={16} color="#000000" />
               </>
             )}
           </Button>
@@ -67,12 +71,12 @@ const Navbar = () => {
           </SheetTrigger>
 
           <SheetContent side="right">
-            <nav className="flex flex-col space-y-4 mt-6">
+            <nav className="flex flex-col  space-y-4 mt-6">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-primary "
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
