@@ -1,4 +1,6 @@
 import backgroundImage from '../../../public/images/footer.png';
+import { Link } from 'react-router-dom'
+
 
 export default function Footer() {
   const menuItems = [
@@ -30,9 +32,9 @@ export default function Footer() {
               <ul className="space-y-6 text-[#ABABAB]  ">
                 {menuItems.map((item, index) => (
                   <li key={index}>
-                    <a href={item.link} className="hover:text-white  inline-block">
+                    <Link to={item.link} className="hover:text-white  inline-block">
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -42,12 +44,12 @@ export default function Footer() {
               <ul className="space-y-6">
                 {legalMenuItems.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.link}
+                    <Link
+                      to={item.link}
                       className={`hover:text-gray-300 inline-block ${item.color === 'black' ? 'text-[#ABABAB]' : ''}`}
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

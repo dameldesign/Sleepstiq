@@ -4,7 +4,7 @@ import { navItems } from '@/types/data';
 import { useTheme } from 'next-themes';
 import { Moon, Sun, MenuIcon } from 'lucide-react';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -34,15 +34,15 @@ const Navbar = () => {
         </div>
         <nav className="hidden md:flex space-x-14 basis-[55%]">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className={`text-primary text-lg ${
                 location.pathname === item.href ? 'font-bold' : ''
               } hover:font-bold hover:text-gray-900`}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -73,14 +73,14 @@ const Navbar = () => {
           <SheetContent side="right">
             <nav className="flex flex-col  space-y-4 mt-6">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-primary "
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </SheetContent>
