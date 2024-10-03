@@ -53,7 +53,7 @@ export default function Homepage() {
       <Happy />
 
       {/* Testimonial  */}
-      <div className="md:pl-32 pb-12 border-b mt-40  pt-20 ">
+      <div className="md:pl-32 pb-12 border-b mt-40 md:pt-20 ">
         <TestimonialSlider testimonials={testimonials} />
       </div>
 
