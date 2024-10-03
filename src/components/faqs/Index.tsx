@@ -58,12 +58,12 @@ export default function ProductFAQ() {
             orientation="vertical"
             className="w-full sticky [@media(max-width:1000px)]:mt-8 top-6"
           >
-            <TabsList className="flex flex-row md:flex-col md:gap-6 h-auto w-full bg-background">
+            <TabsList className="flex flex-row md:flex-col md:gap-6 h-auto  [@media(max-width:1000px)]:mx-auto w-[90%] md:w-full bg-background">
               {tabsData.map((tab) => (
                 <TabsTrigger
                   key={tab.label}
                   value={tab.label}
-                  className={`justify-start underline-none  shadow-none px-4 py-2 text-lg ${
+                  className={`justify-start underline-none  shadow-none px-4 py-2 text-base md:text-lg ${
                     activeTab === tab.label ? 'font-semibold ' : 'font-normal'
                   }`}
                 >

@@ -17,7 +17,7 @@ export default function Happy() {
       </div>
 
       {/* card  */}
-      <div className="flex bg-[#FBF9F2] shadow-2xl h-[450px]  w-[404px]  gap-12 flex-col px-10 py-20 sm:p-6">
+      <div className="flex bg-[#FBF9F2] shadow-2xl h-[450px]  w-full [@media(max-width:1000px)]:px-6 md:w-[404px]  gap-12 flex-col px-10 py-20 sm:p-6">
         <span className="flex-1 text-[#4D533C] text-xl  font-light italic opacity-80  pt-10 text-left">
           I’m a very anxious person but use this and feel so relaxed and sleep way better now with the aid of sleepstiq.{' '}
         </span>
