@@ -1,6 +1,9 @@
-export const routes = [
-  { path: '/', component: 'Home' },
-  { path: '/faq', component: 'FAQ' },
-  { path: '/about', component: 'About' },
-  { path: '/shop', component: 'Shop' },
-];
+
+
+// routes.ts
+export const routes = {
+  home: '/',
+  faq: '/faq',
+  about: '/about',
+  shop: '/shop',
+};

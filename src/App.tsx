@@ -1,62 +1,42 @@
-import { useEffect, useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
-import { useTheme } from 'next-themes';
-import { Button } from './components/ui/button';
-import { Moon, Sun } from 'lucide-react';
-import './index.css';
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { routes } from './routes/ROUTES';
+import './index.css'; // Import global styles first
+import './App.css'; // Component-specific styles
+
+/**
+|--------------------------------------------------
+| Import your components
+|--------------------------------------------------
+*/
+import Home from './pages/Homepage';
+import Faq from './pages/Faq';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/images/Brand.svg" className="logo " alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="w-full max-w-[100vw] overflow-x-hidden h-full ">
+        <Suspense
+          fallback={
+            <div className="h-screen w-screen bg-white opacity-20 flex items-center justify-center">
+              <p className="font-bold flex items-center gap-2">
+                <img src="/images/Brand.svg" alt="Sleep Petiq Logo" className="h-10" />
+              </p>
+            </div>
+          }
+        >
+          {/**
+|--------------------------------------------------
+| route's
+|--------------------------------------------------
+*/}
+
+          <Routes>
+            <Route path={routes.home} element={<Home />} />
+            <Route path={routes.faq} element={<Faq />} />
+          </Routes>
+        </Suspense>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground">
-      <h1 className="text-4xl text-brand font-bold mb-4">Relax & Rest</h1>
-      <Button onClick={toggleTheme} className="flex items-center gap-2">
-        {theme === 'light' ? (
-          <>
-            <Moon size={16} />
-            Switch to Dark
-          </>
-        ) : (
-          <>
-            <Sun size={16} />
-            Switch to Light
-          </>
-        )}
-      </Button>
-    </div>
     </>
   );
 }
