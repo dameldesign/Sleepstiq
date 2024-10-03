@@ -24,7 +24,7 @@ export default function Footer() {
       <div className=" flex flex-col gap-14  items-center justify-between">
         <img src="/images/Brand-white.svg" alt="Sleep Petiq Logo" className="h-16  flex items-start justify-start" />
 
-        <div className="container mx-auto px-4 md:px-10">
+        <div className="container mx-auto mt-8 px-4 md:px-10">
           <div className="flex  flex-col  md:flex-row gap-8">
             <div className="text-left md:basis-[50%] place-self-start justify-center  flex flex-col">
               <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -73,7 +73,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col md:basis-[90%] gap-4 items-start justify-center   ">
+            <div className="flex flex-col md:basis-[90%] gap-4 items-start justify-start  ">
               <div className="border-l text-left border-gray-600 pl-8">
                 <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
                 <p className="mb-4">Feel free to get in touch with us vai email</p>

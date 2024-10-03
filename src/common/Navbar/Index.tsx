@@ -6,7 +6,6 @@ import { Moon, Sun, MenuIcon } from 'lucide-react';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const location = useLocation();
@@ -31,9 +30,9 @@ const Navbar = () => {
         </div>
         <nav className="hidden md:flex space-x-14 basis-[55%]">
           {navItems.map((item) => (
-            <a 
-              key={item.name} 
-              href={item.href} 
+            <a
+              key={item.name}
+              href={item.href}
               className={`text-primary text-lg ${
                 location.pathname === item.href ? 'font-bold' : ''
               } hover:font-bold hover:text-gray-900`}

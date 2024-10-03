@@ -11,6 +11,7 @@ import './App.css'; // Component-specific styles
 */
 import Home from './pages/Homepage';
 import Faq from './pages/Faq';
+import Shop from './pages/Shop';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
 
           <Routes>
             <Route path={routes.home} element={<Home />} />
+            <Route path={routes.shop} element={<Shop />} />
             <Route path={routes.faq} element={<Faq />} />
           </Routes>
         </Suspense>
