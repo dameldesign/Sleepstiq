@@ -10,7 +10,8 @@
   ],
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["lucide-react"],
+    "types": ["lucide-react", "node"],
+    "moduleResolution": "node",
     "paths": {
       "@/*": ["./src/*"]
     }
